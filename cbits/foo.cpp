@@ -1,9 +1,12 @@
-
-double bar(double x) {
 #ifdef __cplusplus
-  return 10.0;
-#else
-  return 20.0;
-#endif
+extern "C" {
+    double bar(double x) {
+      return 10.0;
+    }
 }
+#else
+double bar(double x) {
+  return 20.0;
+}
+#endif
 
